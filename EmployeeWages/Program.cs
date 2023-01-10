@@ -12,7 +12,7 @@ namespace EmployeeWageProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Employee Wage");
-            Console.WriteLine("Choose Option\n 1.Check Absent or Present\t 2.Calculate Daily Wage\t 3.Part Time Wage\t 4.Emp Wage for month\t 5.wages for month\t 6.employee wages for monthly \t 7.emp wages ");
+            Console.WriteLine("Choose Option\n 1.Check Absent or Present\t 2.Calculate Daily Wage\t 3.Part Time Wage\t 4.Emp Wage for month\t 5.wages for month\t 6.employee wages for monthly \t 7.emp wages\n8.wages for compnay ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -39,6 +39,12 @@ namespace EmployeeWageProgram
                     break;
                 case 7:
                     ComputeEmpWages.ComputeEmpWage();
+                    break;
+                case 8:
+                    UsingMultipaleCompany.ComputeWaageForMultipleCompany("TATA", 20, 20, 100);
+                    UsingMultipaleCompany.ComputeWaageForMultipleCompany("BMW", 20, 20, 100);
+                    UsingMultipaleCompany.ComputeWaageForMultipleCompany("TCS", 20, 20, 100);
+                    Console.WriteLine();
                     break;
             }
             Console.ReadLine();
