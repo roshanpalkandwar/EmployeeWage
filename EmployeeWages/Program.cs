@@ -12,7 +12,7 @@ namespace EmployeeWageProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Employee Wage");
-            Console.WriteLine("Choose Option\n 1.Check Absent or Present\t 2.Calculate Daily Wage\t 3.Part Time Wage\t 4.Emp Wage for month\t 5.wages for month\t 6.employee wages for monthly \t 7.emp wages\n8.wages for compnay\n9.emwges for miltiple company \n10.EmpWageBuilder\n11.ComputeEmpWage\n12.CompanyEmpWages");
+            Console.WriteLine("Choose Option\n 1.Check Absent or Present\t 2.Calculate Daily Wage\t 3.Part Time Wage\t 4.Emp Wage for month\t 5.wages for month\t 6.employee wages for monthly \t 7.emp wages\n8.wages for compnay\n9.emwges for miltiple company \n10.EmpWageBuilder\n11.ComputeEmpWage\n12.CompanyEmpWages\n13.daily emp wages along total wages");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -79,6 +79,13 @@ namespace EmployeeWageProgram
                     EmpwageBuilder.addCompanyEmpWage("BMW", 10, 5, 13);
                     EmpwageBuilder.addCompanyEmpWage("TCS", 10, 4, 20);
                     EmpwageBuilder.computeEmpWage();
+                    break;
+                case 13:
+                    DailyTotalWages DailyTotalWages1 = new DailyTotalWages("TATA", 20, 20, 100);
+                    DailyTotalWages DailyTotalWages2 = new DailyTotalWages("BMW", 20, 20, 100);
+                    DailyTotalWages DailyTotalWages3 = new DailyTotalWages("TCS", 20, 20, 100);
+                    DailyTotalWages1.ComputeEmployeeWage();
+                    DailyTotalWages2.ComputeEmployeeWage();
                     break;
             }
             Console.ReadLine();
